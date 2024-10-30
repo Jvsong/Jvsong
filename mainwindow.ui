@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QPlainTextEdit" name="TextEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionOSave"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑（E）</string>
+    </property>
+    <addaction name="actionRecall"/>
+    <addaction name="actionBack"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionReplace"/>
+    <addaction name="actionAllselect"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>格式（O）</string>
+    </property>
+    <addaction name="actionNewline"/>
+    <addaction name="actionShowline"/>
+    <addaction name="actionFont"/>
+    <addaction name="actionfontcolor"/>
+    <addaction name="separator"/>
+    <addaction name="actionBackgroundcolor"/>
+    <addaction name="actionEditbackgroundcolor"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>查看（V）</string>
+    </property>
+    <addaction name="actionTool"/>
+    <addaction name="actionState"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_O"/>
+   <addaction name="menu_V"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionOSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionRecall"/>
+   <addaction name="actionBack"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="separator"/>
+   <addaction name="actionShowline"/>
+   <addaction name="actionNewline"/>
+   <addaction name="actionTool"/>
+   <addaction name="actionState"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/new.png</normaloff>:/img/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(N)</string>
+   </property>
+   <property name="toolTip">
+    <string>新建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/Save.png</normaloff>:/img/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(S)</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/open.png</normaloff>:/img/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(O)</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionOSave">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/OSave.png</normaloff>:/img/OSave.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(A)</string>
+   </property>
+   <property name="toolTip">
+    <string>另存为</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionRecall">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/back.png</normaloff>:/img/back.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤回(U)</string>
+   </property>
+   <property name="toolTip">
+    <string>撤回</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/recall.png</normaloff>:/img/recall.png</iconset>
+   </property>
+   <property name="text">
+    <string>恢复</string>
+   </property>
+   <property name="toolTip">
+    <string>恢复</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/cut.png</normaloff>:/img/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(T)</string>
+   </property>
+   <property name="toolTip">
+    <string>剪切</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/copy.png</normaloff>:/img/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(C)</string>
+   </property>
+   <property name="toolTip">
+    <string>复制</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/paste.png</normaloff>:/img/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(P)</string>
+   </property>
+   <property name="toolTip">
+    <string>粘贴</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/find.png</normaloff>:/img/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找(F)</string>
+   </property>
+   <property name="toolTip">
+    <string>查找</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionReplace">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/replace.png</normaloff>:/img/replace.png</iconset>
+   </property>
+   <property name="text">
+    <string>替换(R)</string>
+   </property>
+   <property name="toolTip">
+    <string>替换</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionNewline">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/Autoline.png</normaloff>:/img/Autoline.png</iconset>
+   </property>
+   <property name="text">
+    <string>自动换行</string>
+   </property>
+   <property name="toolTip">
+    <string>自动换行</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionShowline">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/showline.png</normaloff>:/img/showline.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示行号</string>
+   </property>
+   <property name="toolTip">
+    <string>显示行号</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/font.png</normaloff>:/img/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体</string>
+   </property>
+   <property name="toolTip">
+    <string>字体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>退出（X）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionAllselect">
+   <property name="text">
+    <string>全选(A)</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionfontcolor">
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+   <property name="toolTip">
+    <string>字体颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionBackgroundcolor">
+   <property name="text">
+    <string>字体背景色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionEditbackgroundcolor">
+   <property name="text">
+    <string>编辑背景颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionTool">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/tool.png</normaloff>:/img/tool.png</iconset>
+   </property>
+   <property name="text">
+    <string>工具栏</string>
+   </property>
+   <property name="toolTip">
+    <string>工具栏</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionState">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/state.png</normaloff>:/img/state.png</iconset>
+   </property>
+   <property name="text">
+    <string>状态栏</string>
+   </property>
+   <property name="toolTip">
+    <string>状态栏</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="notepad.qrc"/>
+ </resources>
+ <connections/>
+</ui>
