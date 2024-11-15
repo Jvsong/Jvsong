@@ -31,7 +31,7 @@
      <number>1</number>
     </property>
     <item>
-     <widget class="QPlainTextEdit" name="TextEdit"/>
+     <widget class="CodeEditor" name="TextEdit"/>
     </item>
    </layout>
   </widget>
@@ -41,7 +41,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -86,10 +86,17 @@
     <addaction name="actionTool"/>
     <addaction name="actionState"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_E"/>
    <addaction name="menu_O"/>
    <addaction name="menu_V"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -318,6 +325,9 @@
    </property>
   </action>
   <action name="actionNewline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="notepad.qrc">
      <normaloff>:/img/Autoline.png</normaloff>:/img/Autoline.png</iconset>
@@ -336,6 +346,9 @@
    </property>
   </action>
   <action name="actionShowline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="notepad.qrc">
      <normaloff>:/img/showline.png</normaloff>:/img/showline.png</iconset>
@@ -415,6 +428,9 @@
    </property>
   </action>
   <action name="actionTool">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="notepad.qrc">
      <normaloff>:/img/tool.png</normaloff>:/img/tool.png</iconset>
@@ -430,6 +446,9 @@
    </property>
   </action>
   <action name="actionState">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="notepad.qrc">
      <normaloff>:/img/state.png</normaloff>:/img/state.png</iconset>
@@ -444,7 +463,26 @@
     <enum>QAction::MenuRole::NoRole</enum>
    </property>
   </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/img/about.png</normaloff>:/img/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">codeeditor.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="notepad.qrc"/>
  </resources>

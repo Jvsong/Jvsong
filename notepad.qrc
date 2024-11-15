@@ -18,5 +18,7 @@
         <file>img/showline.png</file>
         <file>img/state.png</file>
         <file>img/tool.png</file>
+        <file>img/about.png</file>
+        <file>img/diary.png</file>
     </qresource>
 </RCC>
