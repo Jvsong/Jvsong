@@ -319,7 +319,6 @@ void MainWindow::on_actionNewline_triggered() //自动换行
     }
 }
 
-
 void MainWindow::on_actionFont_triggered()
 {
     bool ok = false;
@@ -330,14 +329,12 @@ void MainWindow::on_actionFont_triggered()
     }
 }
 
-
 void MainWindow::on_actionState_triggered()
 {
     bool visable = ui->statusbar->isVisible();
     ui->statusbar->setVisible(!visable);
     ui->actionState->setChecked(!visable);
 }
-
 
 void MainWindow::on_actionTool_triggered()
 {
@@ -347,12 +344,10 @@ void MainWindow::on_actionTool_triggered()
 
 }
 
-
 void MainWindow::on_actionAllselect_triggered()
 {
     ui->TextEdit->selectAll();
 }
-
 
 void MainWindow::on_actionQuit_triggered()
 {
@@ -360,7 +355,6 @@ void MainWindow::on_actionQuit_triggered()
         exit(0);
     }
 }
-
 
 void MainWindow::on_TextEdit_cursorPositionChanged()
 {

@@ -58,7 +58,6 @@ void SearchDialog::on_btFindNext_clicked()
 
 }
 
-
 void SearchDialog::on_btCancel_clicked()
 {
     accept();
