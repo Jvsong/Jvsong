@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 128" role="img" aria-labelledby="title">
+  <title id="title">A winding trail through blue hills at first light</title>
+  <defs>
+    <linearGradient id="sky" x2="1" y2="0"><stop stop-color="#ebe5df"/><stop offset=".58" stop-color="#f7e2cf"/><stop offset="1" stop-color="#ffc6a6"/></linearGradient>
+    <clipPath id="crop"><rect width="1080" height="128" rx="8"/></clipPath>
+    <pattern id="paper" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".55" fill="#293150" opacity=".13"/></pattern>
+  </defs>
+  <g clip-path="url(#crop)">
+    <rect width="1080" height="128" fill="url(#sky)"/>
+    <circle cx="805" cy="50" r="29" fill="#fff9db"/>
+    <path d="M0 69 58 65 102 68 158 59 191 61 233 52 265 55 302 48 331 51 373 38 389 42 409 39 451 51 494 54 527 47 552 49 579 40 597 42 617 36 640 46 659 42 698 55 733 60 771 53 799 57 825 47 857 55 880 48 920 58 957 51 1009 57 1038 48 1080 55V128H0Z" fill="#b8b3bd"/>
+    <path d="M0 41 38 44 91 58 151 65 187 73 235 78 278 79 316 67 346 64 377 53 399 57 423 45 444 48 472 34 493 40 512 36 535 49 565 56 605 72 651 80 702 76 747 67 781 62 806 57 841 62 875 55 907 61 951 50 989 57 1039 60 1080 52V128H0Z" fill="#848ba1"/>
+    <path d="M0 63Q63 64 145 86T310 99Q382 94 444 82T565 78Q635 80 695 88T823 87Q899 77 951 59T1080 37V128H0Z" fill="#525e7a"/>
+    <path d="M0 98Q80 78 163 80T320 101Q392 118 477 106T632 92Q715 89 786 103T929 104Q1015 85 1080 78V128H0Z" fill="#35405d"/>
+    <path d="M0 109Q134 88 248 102T433 120Q522 123 607 108T780 110Q857 128 945 116T1080 98V128H0Z" fill="#242f49"/>
+    <path d="M546 128Q555 122 588 118T620 110Q619 107 595 105T578 101Q582 99 604 96Q580 97 573 100T594 106Q613 109 611 111T573 117Q535 122 523 128Z" fill="#eed2ad"/>
+    <rect width="1080" height="128" fill="url(#paper)"/>
+  </g>
+</svg>
