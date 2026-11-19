@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" role="img" aria-labelledby="title">
+  <title id="title">Jv Song · Software QA and IoT · Running track</title>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#29473e" stroke-width="1"/></pattern>
+    <clipPath id="frame"><rect width="960" height="200" rx="16"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="960" height="200" fill="#102e26"/>
+    <rect x="465" width="495" height="200" fill="url(#grid)"/>
+    <g transform="rotate(-18 755 100)" fill="none" stroke="#5d8976" stroke-width="1.7">
+      <rect x="548" y="18" width="425" height="166" rx="83"/>
+      <rect x="556" y="26" width="409" height="150" rx="75"/>
+      <rect x="564" y="34" width="393" height="134" rx="67"/>
+      <rect x="572" y="42" width="377" height="118" rx="59" stroke="#b7ef8c" stroke-width="3"/>
+      <rect x="580" y="50" width="361" height="102" rx="51"/>
+      <path d="M692 15v39m6-39v39" stroke="#e9f4df" stroke-width="2"/>
+      <circle cx="839" cy="160" r="7" fill="#ffbd77" stroke="#102e26" stroke-width="3"/>
+    </g>
+    <g font-family="system-ui, sans-serif">
+      <text x="40" y="66" font-size="18" letter-spacing="3" fill="#b7ef8c">SOFTWARE QA / IoT</text>
+      <text x="37" y="148" font-size="72" font-weight="700" fill="#f1f6e9">Jv Song</text>
+    </g>
+  </g>
+</svg>
